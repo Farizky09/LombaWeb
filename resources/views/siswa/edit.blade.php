@@ -25,6 +25,10 @@
         </select>
       </div>
       <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">No HP</label>
+        <input type="number" class="form-control" name="no_hp" value="{{$siswa->no_hp}}" id="exampleFormControlInput1" placeholder="Masukkan No HP">
+      </div>
+      <div class="mb-3">
         <label for="exampleFormControlTextarea1" class="form-label">Alamat</label>
         <textarea class="form-control" name="alamat"  id="exampleFormControlTextarea1" rows="3">{{$siswa->alamat}}</textarea>
       </div>

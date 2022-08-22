@@ -13,6 +13,7 @@
         <th>Nama</th>
         <th>Kelas</th>
         <th>Jenis Kelamin</th>
+        <th>NO HP</th>
         <th>Alamat</th>
         <th colspan="2">Aksi</th> 
     </tr>
@@ -22,6 +23,7 @@
          <td>{{ $s->nis }}</td>
          <td>{{ $s->nama }}</td>
          <td>{{ $s->kelas }}</td>
+         <td>{{ $s->no_hp }}</td>
          <td>{{ $s->jenis_kelamin }}</td>
          <td>{{ $s->alamat }}</td>
          <td>
