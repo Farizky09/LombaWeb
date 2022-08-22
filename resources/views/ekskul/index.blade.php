@@ -3,7 +3,8 @@
 <div class="container">
   <div class="row">
   <div class="col-6">
-      <h1>Data ekskul</h1>
+      <h1>Data </h1>
+      <h2>{{count($ekskul)}}</h2>
   </div>
   <a href="/ekskul/create"><button class="btn btn-primary float-end"> Tambah data</button></a>
 <table class="table table-dark">
@@ -21,6 +22,7 @@
        <td>{{ $s->kode }}</td>
        <td>{{ $s->nama_ekskul }}</td>
        <td>{{ $s->pembina }}</td>
+       
        <td>
            <div class="btn-group" role="group" aria-label="Basic example">
                 <a class="btn btn-outline-warning" href="/ekskul/{{ $s->id }}/edit">EDIT</a>

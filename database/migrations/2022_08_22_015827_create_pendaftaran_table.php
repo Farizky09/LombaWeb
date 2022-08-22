@@ -15,6 +15,8 @@ return new class extends Migration
     {
         Schema::create('pendaftaran', function (Blueprint $table) {
             $table->id();
+            $table->string('nama');
+            $table->string('ekskul');
             $table->timestamps();
         });
     }
