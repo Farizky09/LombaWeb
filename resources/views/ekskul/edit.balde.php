@@ -20,4 +20,5 @@
     <input type="submit" class="btn btn-primary" name="submit" value="simpan">
 </form>
 </div>
+
 @endsection
