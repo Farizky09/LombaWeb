@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\EkskulController;
 use App\Http\Controllers\BerandaController;
+use App\Http\Controllers\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,12 +21,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::middleware(['auth'])->group(function(){
-     
-       Route::get('/siswa',[SiswaController::class,'index']);
-       Route::get('/siswa/create',[SiswaController::class,'create']);
-       Route::post('/siswa/store',[SiswaController::class,'store']);
-       Route::get('/siswa/{id}/edit',[SiswaController::class,'edit']);
-       Route::put('/siswa/{id}/',[SiswaController::class,'update']);
+    
+    Route::get('/siswa',[SiswaController::class,'index']);
+    Route::get('/siswa/create',[SiswaController::class,'create']);
+    Route::post('/siswa/store',[SiswaController::class,'store']);
+    Route::get('/siswa/{id}/edit',[SiswaController::class,'edit']);
+    Route::put('/siswa/{id}/',[SiswaController::class,'update']);
        Route::delete('/siswa/{id}/',[SiswaController::class,'destroy']);
 
        Route::get('/ekskul',[EkskulController::class,'index']);
@@ -37,5 +38,6 @@ Route::middleware(['auth'])->group(function(){
 });
 Auth::routes();
 Route::get('/beranda',[BerandaController::class,'index']);
+Route::get('/dashboard',[DashboardController::class,'index']);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
