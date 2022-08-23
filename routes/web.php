@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\EkskulController;
+use App\Http\Controllers\BerandaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,6 +20,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::middleware(['auth'])->group(function(){
+     
        Route::get('/siswa',[SiswaController::class,'index']);
        Route::get('/siswa/create',[SiswaController::class,'create']);
        Route::post('/siswa/store',[SiswaController::class,'store']);
@@ -34,5 +36,6 @@ Route::middleware(['auth'])->group(function(){
        Route::delete('/ekskul/{id}/',[EkskulController::class,'destroy']);
 });
 Auth::routes();
+Route::get('/beranda',[BerandaController::class,'index']);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
