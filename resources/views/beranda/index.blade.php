@@ -6,7 +6,7 @@
                 <div class="col-md-8">
                     <h1 class="display-2 fw-bold" data-aos="fade-up">Selamat Datang di <span class="text-brand">SMKN 6 JEMBER.</span></h1>
                     <h4 data-aos="fade-up" data-aos-delay="100" class="mt-3 mb-5">Salah satu pendidikan dengan jenjang SMK di Tanggul Kulon</h4>
-                    <div data-aos="fade-up" data-aos-delay="200"><a href="#" class="btn btn-brand">Login</a></div>
+                    <div data-aos="fade-up" data-aos-delay="200"><a href="/dashboard" class="btn btn-brand">Login</a></div>
                 </div>
             </div>
         </div>
@@ -22,6 +22,7 @@
                         <p>Ekstrakurikuler adalah kegiatan non-pelajaran formal yang dilakukan peserta didik sekolah atau universitas, umumnya di luar jam belajar kurikulum standar. Kegiatan-kegiatan ini ada pada setiap jenjang pendidikan dari sekolah dasar sampai universitas.</p>
                         <div class="line"></div>
                     </div>
+                    
                 </div>
             </div>
             <div class="row gy-4 text-center mb-3">
@@ -30,7 +31,7 @@
                         <img src="{{ asset('index/images/pramuka.jpg') }}" class="rounded-2" alt="">
                         <h5 class="mt-4">Pramuka</h5>
                         <p>"Pramuka" merupakan singkatan dari Praja Muda Karana, yang memiliki arti Jiwa Muda yang Suka Berkarya.</p>
-                        <a href="#" class="custom-link">
+                        <a href="/beranda/pramuka" class="custom-link">
                             <span>Read More</span>
                             <i class='bx bx-right-arrow-alt'></i>
                         </a>
@@ -41,7 +42,7 @@
                         <img src="{{ asset('index/images/paskibra.jpg') }}" class="rounded-2" alt="">
                         <h5 class="mt-4">PASKIBRA</h5>
                         <p>Pasukan Pengibar Bendera Pusaka dengan tugas utamanya untuk mengibarkan dan menurunkan Bendera.</p>
-                        <a href="#" class="custom-link">
+                        <a href="/beranda/paskibra" class="custom-link">
                             <span>Read More</span>
                             <i class='bx bx-right-arrow-alt'></i>
                         </a>
@@ -52,7 +53,7 @@
                         <img src="{{ asset('index/images/pmr.jpg') }}" class="rounded-2" alt="">
                         <h5 class="mt-4">Palang Merah Remaja</h5>
                         <p>Palang Merah Remaja adalah wadah pembinaan dan pengembangan anggota remaja PMI.</p>
-                        <a href="#" class="custom-link">
+                        <a href="/beranda/pmr" class="custom-link">
                             <span>Read More</span>
                             <i class='bx bx-right-arrow-alt'></i>
                         </a>
@@ -63,7 +64,7 @@
                         <img src="{{ asset('index/images/basket.jpg') }}" class="rounded-2" alt="">
                         <h5 class="mt-4">Basket</h5>
                         <p>Bola basket adalah olahraga bola berkelompok yang terdiri dari dua tim dengan masing-masing tim berisi lima orang.</p>
-                        <a href="#" class="custom-link">
+                        <a href="/beranda/basket" class="custom-link">
                             <span>Read More</span>
                             <i class='bx bx-right-arrow-alt'></i>
                         </a>
@@ -76,7 +77,7 @@
                         <img src="{{ asset('index/images/panduan_suara.jpg') }}" class="rounded-2" alt="">
                         <h5 class="mt-4">Paduan Suara</h5>
                         <p>Gabungan sejumlah penyanyi yang mengkombinasikan beragam jenis suara ke dalam suatu harmoni.</p>
-                        <a href="#" class="custom-link">
+                        <a href="/beranda/paduansuara" class="custom-link">
                             <span>Read More</span>
                             <i class='bx bx-right-arrow-alt'></i>
                         </a>
@@ -87,7 +88,7 @@
                         <img src="{{ asset('index/images/sepak_bola.jpg') }}" class="rounded-2" alt="">
                         <h5 class="mt-4">Sepak Bola</h5>
                         <p>Permainan dengan menggiring bola yang memiliki tujuan untuk memasukkan bola ke gawang tim lawan. </p>
-                        <a href="#" class="custom-link">
+                        <a href="/beranda/sepakbola" class="custom-link">
                             <span>Read More</span>
                             <i class='bx bx-right-arrow-alt'></i>
                         </a>
@@ -98,7 +99,7 @@
                         <img src="{{ asset('index/images/futsal.jpg') }}" class="rounded-2" alt="">
                         <h5 class="mt-4">Futsal</h5>
                         <p>Futsal adalah permainan bola yang dimainkan oleh dua tim, yang masing-masing beranggotakan lima orang.</p>
-                        <a href="#" class="custom-link">
+                        <a href="/beranda/futsal" class="custom-link">
                             <span>Read More</span>
                             <i class='bx bx-right-arrow-alt'></i>
                         </a>
@@ -109,7 +110,7 @@
                         <img src="{{ asset('index/images/voli.jpg') }}" class="rounded-2" alt="">
                         <h5 class="mt-4">Voli</h5>
                         <p>Olahraga yang dimainkan oleh dua grup berlawanan. Masing-masing grup memiliki enam orang pemain.</p>
-                        <a href="#" class="custom-link">
+                        <a href="/beranda/voli" class="custom-link">
                             <span>Read More</span>
                             <i class='bx bx-right-arrow-alt'></i>
                         </a>
@@ -122,7 +123,7 @@
                         <img src="{{ asset('index/images/tari.jpg') }}" class="rounded-2" alt="">
                         <h5 class="mt-4">Teater dan Kesenian</h5>
                         <p>Seni teater adalah jenis kesenian pertunjukan drama yang dipentaskan di atas panggung.</p>
-                        <a href="#" class="custom-link">
+                        <a href="/beranda/teaterkesenian" class="custom-link">
                             <span>Read More</span>
                             <i class='bx bx-right-arrow-alt'></i>
                         </a>
@@ -133,7 +134,7 @@
                         <img src="{{ asset('index/images/remas.jpg') }}" class="rounded-2" alt="">
                         <h5 class="mt-4">Remaja Masjid</h5>
                         <p>Perkumpulan pemuda masjid yang melakukan aktivitas sosial dan ibadah di lingkungan suatu masjid.</p>
-                        <a href="#" class="custom-link">
+                        <a href="/beranda/remajamasjid" class="custom-link">
                             <span>Read More</span>
                             <i class='bx bx-right-arrow-alt'></i>
                         </a>
@@ -144,7 +145,7 @@
                         <img src="{{ asset('index/images/tata_boga.jpg') }}" class="rounded-2" alt="">
                         <h5 class="mt-4">Tata Boga</h5>
                         <p>Keahlian terkait dengan seni dalam menyiapkan, memasak, dan menghidangkan makanan siap saji.</p>
-                        <a href="#" class="custom-link">
+                        <a href="/beranda/tataboga" class="custom-link">
                             <span>Read More</span>
                             <i class='bx bx-right-arrow-alt'></i>
                         </a>
@@ -155,7 +156,7 @@
                         <img src="{{ asset('index/images/english_club.jpg') }}" class="rounded-2" alt="">
                         <h5 class="mt-4">English Club</h5>
                         <p>Peserta didik dalam menyalurkan minat dan bakat serta pengetahuan di bidang Bahasa Inggris.</p>
-                        <a href="#" class="custom-link">
+                        <a href="/beranda/englishclub" class="custom-link">
                             <span>Read More</span>
                             <i class='bx bx-right-arrow-alt'></i>
                         </a>
