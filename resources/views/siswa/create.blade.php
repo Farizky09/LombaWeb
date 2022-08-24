@@ -28,7 +28,7 @@
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">NO HP</label>
                 <input type="number" class="form-control" name="no_hp" id="exampleFormControlInput1"
-                    placeholder="Masukkan Kelas">
+                    placeholder="Masukkan no">
             </div>
             <div class="mb-3">
                 <label for="exampleFormControlTextarea1" class="form-label">Alamat</label>

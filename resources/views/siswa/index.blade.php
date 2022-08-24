@@ -70,7 +70,7 @@
                     <td>
                       <div class="d-flex px-2 py-1">                      
                         <div class="d-flex flex-column justify-content-center">
-                          <h6 class="mb-0 text-sm">{{ $s->nama }}</h6>                          
+                          <h6 class="mb-0 text-sm">{{ $s->id }}</h6>                          
                         </div>
                       </div>
                     </td>
@@ -78,6 +78,9 @@
                       <p class="text-xs font-weight-bold mb-0">{{ $s->nis }}</p>                    
                     </td>
                     <td class="align-middle text-center text-sm">
+                      <span class="text-secondary text-xs font-weight-bold">{{ $s->nama }}</span>
+                    </td>
+                    <td class="align-middle text-center">
                       <span class="text-secondary text-xs font-weight-bold">{{ $s->kelas }}</span>
                     </td>
                     <td class="align-middle text-center">

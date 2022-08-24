@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('nama');
             $table->string('kelas');
             $table->enum('jenis_kelamin',['L','P']);
-            $table->integer('no_hp');
+            $table->string('no_hp');
             $table->text('alamat');
             $table->timestamps();
         });

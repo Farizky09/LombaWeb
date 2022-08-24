@@ -21,7 +21,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::middleware(['auth'])->group(function(){
-    
+    Route::get('/dashboard',[DashboardController::class,'index']);
+
     Route::get('/siswa',[SiswaController::class,'index']);
     Route::get('/siswa/create',[SiswaController::class,'create']);
     Route::post('/siswa/store',[SiswaController::class,'store']);
@@ -54,6 +55,6 @@ Route::get('/beranda/englishclub',[BerandaController::class,'index_englishclub']
 
 
 
-Route::get('/dashboard',[DashboardController::class,'index']);
+
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

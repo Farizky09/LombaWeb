@@ -36,7 +36,7 @@
                         <a class="nav-link" href="#history">History</a>
                     </li>                    
                     <li class="nav-item">
-                        <a class="nav-link" href="http://127.0.0.1:8000/dashboard"><i class='bx bx-user'></i> Login</a>
+                        <a class="nav-link" href="http://127.0.0.1:8000/login"><i class='bx bx-user'></i> Login</a>
                     </li>                    
                 </ul>                
             </div>
