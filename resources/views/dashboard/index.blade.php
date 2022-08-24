@@ -1,6 +1,4 @@
 @extends('layouts.profile')
-@extends('layouts.profile')
-
 @section('c-profile')
     <div class="container-fluid py-4">
       <div class="row">
