@@ -56,29 +56,30 @@
                 <thead>
                   <tr>
                     <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Nama</th>
-                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">NIS</th>                  
+                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">NIS</th>                  
                     <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">kelas</th>
                     <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Jenis Kelamin</th>
                     <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">NO HP</th>
                     <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Alamat</th>                  
+                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7" colspan="2">Aksi</th>                  
                     <th class="text-secondary opacity-7"></th>
                   </tr>
                 </thead>
                 @foreach ($siswa as $s)
                 <tbody>
                   <tr>
-                    <td>
+                    {{-- <td>
                       <div class="d-flex px-2 py-1">                      
                         <div class="d-flex flex-column justify-content-center">
                           <h6 class="mb-0 text-sm">{{ $s->id }}</h6>                          
                         </div>
                       </div>
-                    </td>
+                    </td> --}}
                     <td>
-                      <p class="text-xs font-weight-bold mb-0">{{ $s->nis }}</p>                    
+                      <p class="text-xs font-weight-bold mb-0">{{ $s->nama }}</p>                    
                     </td>
                     <td class="align-middle text-center text-sm">
-                      <span class="text-secondary text-xs font-weight-bold">{{ $s->nama }}</span>
+                      <span class="text-secondary text-xs font-weight-bold">{{ $s->nis }}</span>
                     </td>
                     <td class="align-middle text-center">
                       <span class="text-secondary text-xs font-weight-bold">{{ $s->kelas }}</span>
@@ -94,13 +95,30 @@
                     </td>
                     <td class="align-middle">
                         <a href="/siswa/{{ $s->id }}/edit" class="badge badge-sm bg-gradient-warning mx-1" data-toggle="tooltip" data-original-title="Edit user">
-                        Edit
-                        </a>
+                            Edit
+                        </a>                                                     
+                    </td>
+                    <td>
                         <form action="/siswa/{{ $s->id }}" method="POST">
-                        @csrf
-                        @method('delete')
-                        <input class="badge badge-sm bg-gradient-danger" type="submit" onclick="return confirm('apakah anda yakin ingin dihapus?')" value="Delete">
-                        </form>                      
+                            @csrf
+                           @method('delete')
+                           <input class="mx-1" style="background-image: linear-gradient(310deg, #fb6340 0%, #fb4040 100%); --bs-badge-padding-x: 0.9em;
+                           --bs-badge-padding-y: 0.55em;
+                           --bs-badge-font-size: 0.75em;
+                           --bs-badge-font-weight: 700;
+                           --bs-badge-color: #fff;
+                           --bs-badge-border-radius: 0.45rem;
+                           display: inline-block;
+                           padding: var(--bs-badge-padding-y) var(--bs-badge-padding-x);
+                           font-size: var(--bs-badge-font-size);
+                           font-weight: var(--bs-badge-font-weight);
+                           line-height: 1;
+                           color: var(--bs-badge-color);
+                           text-align: center;
+                           white-space: nowrap;
+                           vertical-align: baseline;
+                           border-radius: var(--bs-badge-border-radius, 0);" type="submit" onclick="return confirm('apakah anda yakin ingin dihapus?')" value="Delete">
+                       </form>
                     </td>
                   </tr>
                 </tbody>

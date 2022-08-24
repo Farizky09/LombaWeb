@@ -1,5 +1,5 @@
-@extends('layouts.app')
-@section('content')
+@extends('layouts.profile')
+@section('c-profile')
 <div class="container">
   <div class="row">
   <div class="col-6">
