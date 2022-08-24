@@ -1,12 +1,12 @@
-  @extends('layouts.app')
-  @section('content')
-<div class="container">
+@extends('layouts.profile')
+@section('c-profile')
+{{-- <div class="container">
     <div class="row">
     <div class="col-6">
         <h1>Data Siswa</h1>
     </div>
     <a href="/siswa/create"><button class="btn btn-primary float-end"> Tambah data</button></a>
-<table class="table table-dark">
+    <table class="table table-dark">
     <tr>
         <th># </th>
         <th>NIS</th>
@@ -37,12 +37,78 @@
              </div>
          </td>
     </tr>
-@endforeach
-</table>
-</div>
-</div>
+    @endforeach
+    </table>
+    </div>
+</div> --}}
 
-
+<div class="container-fluid py-4">
+    <div class="row">
+      <div class="col-12">
+        <div class="card mb-4">
+          <div class="card-header pb-0">
+                <a href="/siswa/create"><button class="btn btn-primary float-end"> Tambah data</button></a>
+                <h6>Data Siswa</h6>
+          </div>    
+          <div class="card-body px-0 pt-0 pb-2">
+            <div class="table-responsive p-0">
+              <table class="table align-items-center mb-0">
+                <thead>
+                  <tr>
+                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Nama</th>
+                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">NIS</th>                  
+                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">kelas</th>
+                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Jenis Kelamin</th>
+                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">NO HP</th>
+                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Alamat</th>                  
+                    <th class="text-secondary opacity-7"></th>
+                  </tr>
+                </thead>
+                @foreach ($siswa as $s)
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="d-flex px-2 py-1">                      
+                        <div class="d-flex flex-column justify-content-center">
+                          <h6 class="mb-0 text-sm">{{ $s->nama }}</h6>                          
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <p class="text-xs font-weight-bold mb-0">{{ $s->nis }}</p>                    
+                    </td>
+                    <td class="align-middle text-center text-sm">
+                      <span class="text-secondary text-xs font-weight-bold">{{ $s->kelas }}</span>
+                    </td>
+                    <td class="align-middle text-center">
+                      <span class="text-secondary text-xs font-weight-bold">{{ $s->jenis_kelamin }}</span>
+                    </td>
+                    <td class="align-middle text-center">
+                      <span class="text-secondary text-xs font-weight-bold">{{ $s->no_hp }}</span>
+                    </td>
+                    <td class="align-middle text-center">
+                      <span class="text-secondary text-xs font-weight-bold">{{ $s->alamat }}</span>
+                    </td>
+                    <td class="align-middle">
+                        <a href="/siswa/{{ $s->id }}/edit" class="badge badge-sm bg-gradient-warning mx-1" data-toggle="tooltip" data-original-title="Edit user">
+                        Edit
+                        </a>
+                        <form action="/siswa/{{ $s->id }}" method="POST">
+                        @csrf
+                        @method('delete')
+                        <input class="badge badge-sm bg-gradient-danger" type="submit" onclick="return confirm('apakah anda yakin ingin dihapus?')" value="Delete">
+                        </form>                      
+                    </td>
+                  </tr>
+                </tbody>
+                @endforeach
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
 @endsection
