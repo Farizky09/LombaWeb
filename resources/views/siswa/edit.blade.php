@@ -1,5 +1,5 @@
-@extends('layouts.master')
-@section('content')
+@extends('layouts.profile')
+@section('c-profile')
 
 <div class="container">
 <form class="form-group" action="/siswa/{{$siswa->id}}" method="POST">

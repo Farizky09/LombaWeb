@@ -47,7 +47,7 @@
       <div class="col-12">
         <div class="card mb-4">
           <div class="card-header pb-0">
-                <a href="/siswa/create"><button class="btn btn-primary float-end"> Tambah data</button></a>
+                <a href="/siswa/create"><button class="btn btn-primary float-end">Tambah data</button></a>
                 <h6>Data Siswa</h6>
           </div>    
           <div class="card-body px-0 pt-0 pb-2">
@@ -56,29 +56,30 @@
                 <thead>
                   <tr>
                     <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Nama</th>
-                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">NIS</th>                  
+                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">NIS</th>                  
                     <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">kelas</th>
                     <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Jenis Kelamin</th>
                     <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">NO HP</th>
                     <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Alamat</th>                  
+                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7" colspan="2">Aksi</th>                  
                     <th class="text-secondary opacity-7"></th>
                   </tr>
                 </thead>
                 @foreach ($siswa as $s)
                 <tbody>
                   <tr>
-                    <td>
+                    {{-- <td>
                       <div class="d-flex px-2 py-1">                      
                         <div class="d-flex flex-column justify-content-center">
                           <h6 class="mb-0 text-sm">{{ $s->nis }}</h6>                          
                         </div>
                       </div>
-                    </td>
+                    </td> --}}
                     <td>
-                      <p class="text-xs font-weight-bold mb-0">{{ $s->nis }}</p>                    
+                      <p class="text-xs font-weight-bold mb-0 ps-3">{{ $s->nama }}</p>                    
                     </td>
                     <td class="align-middle text-center text-sm">
-                      <span class="text-secondary text-xs font-weight-bold">{{ $s->nama }}</span>
+                      <span class="text-secondary text-xs font-weight-bold">{{ $s->nis }}</span>
                     </td>
                     <td class="align-middle text-center">
                       <span class="text-secondary text-xs font-weight-bold">{{ $s->kelas }}</span>
@@ -92,15 +93,16 @@
                     <td class="align-middle text-center">
                       <span class="text-secondary text-xs font-weight-bold">{{ $s->alamat }}</span>
                     </td>
-                    <td class="align-middle">
-                        <a href="/siswa/{{ $s->id }}/edit" class="badge badge-sm bg-gradient-warning mx-1" data-toggle="tooltip" data-original-title="Edit user">
-                        Edit
-                        </a>
+                 
+                    <td class="align-middle text-center">
                         <form action="/siswa/{{ $s->id }}" method="POST">
-                        @csrf
-                        @method('delete')
-                        <input class="badge badge-sm bg-gradient-danger" type="submit" onclick="return confirm('apakah anda yakin ingin dihapus?')" value="Delete">
-                        </form>                      
+                            @csrf
+                           @method('delete')
+                           <input class="btn btn-danger btn-sm mx-1 mt-3" type="submit" onclick="return confirm('apakah anda yakin ingin dihapus?')" value="Delete">
+                            <a href="/siswa/{{ $s->id }}/edit" class="btn btn-warning btn-sm mx-1 mt-3" data-toggle="tooltip" data-original-title="Edit user">
+                              Edit
+                          </a>   
+                       </form>
                     </td>
                   </tr>
                 </tbody>
