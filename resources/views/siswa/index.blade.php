@@ -49,6 +49,11 @@
           <div class="card-header pb-0">
                 <a href="/siswa/create"><button class="btn btn-primary float-end">Tambah data</button></a>
                 <h6>Data Siswa</h6>
+                {{--  @if(Auth::user()->role == "admin")
+                <h6>AKu Admin</h6>
+                @else
+                <h6>Aku SIswa</h6>
+                @endif  --}}
           </div>    
           <div class="card-body px-0 pt-0 pb-2">
             <div class="table-responsive p-0">

@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class UserController extends Controller
 {
     public function index(){
-        $siswa = User::all();
+        $siswa = User::where('id','!=','1')->get();
         return view('siswa.index',compact(['siswa']));
     }
     public function create(){
