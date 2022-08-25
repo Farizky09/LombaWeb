@@ -26,7 +26,7 @@ Route::middleware(['auth'])->group(function(){
    // Route::get('/dashboard',[DashboardController::class,'index']);
 
 
-   Route::get('/dashboard', [DashboardController::class,'index']);
+   Route::get('/dashboard ', [DashboardController::class,'index']);
    Route::get('/pendaftaran',[PendaftaranController::class,'index']);
     Route::get('/pendaftaran/create',[PendaftaranController::class,'create']);
     Route::post('/pendaftaran/store',[PendaftaranController::class,'store']);
