@@ -48,12 +48,7 @@
         <div class="card mb-4">
           <div class="card-header pb-0">
                 <a href="/siswa/create"><button class="btn btn-primary float-end">Tambah data</button></a>
-                <h6>Data Siswa</h6>
-                {{--  @if(Auth::user()->role == "admin")
-                <h6>AKu Admin</h6>
-                @else
-                <h6>Aku SIswa</h6>
-                @endif  --}}
+                <h6>Data Siswa</h6>     
           </div>    
           <div class="card-body px-0 pt-0 pb-2">
             <div class="table-responsive p-0">
@@ -70,16 +65,8 @@
                     <th class="text-secondary opacity-7"></th>
                   </tr>
                 </thead>
-                @foreach ($siswa as $s)
-              
-                  <tr>
-                    {{-- <td>
-                      <div class="d-flex px-2 py-1">                      
-                        <div class="d-flex flex-column justify-content-center">
-                          <h6 class="mb-0 text-sm">{{ $s->nis }}</h6>                          
-                        </div>
-                      </div>
-                    </td> --}}
+                @foreach ($siswa as $s)              
+                  <tr>                    
                     <td>
                       <p class="text-xs font-weight-bold mb-0 ps-3">{{ $s->name }}</p>                    
                     </td>
