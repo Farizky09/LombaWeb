@@ -5,6 +5,7 @@ use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\EkskulController;
 use App\Http\Controllers\BerandaController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\PendaftaranController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,17 +19,31 @@ use App\Http\Controllers\DashboardController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('/beranda');
 });
+Auth::routes();
 Route::middleware(['auth'])->group(function(){
-    Route::get('/dashboard',[DashboardController::class,'index']);
+   // Route::get('/dashboard',[DashboardController::class,'index']);
 
-    Route::get('/siswa',[SiswaController::class,'index']);
-    Route::get('/siswa/create',[SiswaController::class,'create']);
-    Route::post('/siswa/store',[SiswaController::class,'store']);
-    Route::get('/siswa/{id}/edit',[SiswaController::class,'edit']);
-    Route::put('/siswa/{id}/',[SiswaController::class,'update']);
-    Route::delete('/siswa/{id}/',[SiswaController::class,'destroy']);
+
+   Route::get('/dashboard', [DashboardController::class,'index']);
+   Route::get('/pendaftaran',[PendaftaranController::class,'index']);
+    Route::get('/pendaftaran/create',[PendaftaranController::class,'create']);
+    Route::post('/pendaftaran/store',[PendaftaranController::class,'store']);
+    Route::get('/pendaftaran/{id}/edit',[PendaftaranController::class,'edit']);
+    Route::put('/pendaftaran/{id}/',[PendaftaranController::class,'update']);
+    Route::delete('/pendaftaran/{id}/',[PendaftaranController::class,'destroy']);
+
+
+
+   
+       Route::get('/siswa',[SiswaController::class,'index']);
+       Route::get('/siswa/create',[SiswaController::class,'create']);
+       Route::post('/siswa/store',[SiswaController::class,'store']);
+       Route::get('/siswa/{id}/edit',[SiswaController::class,'edit']);
+       Route::put('/siswa/{id}/',[SswaController::class,'update']);
+       Route::delete('/siswa/{id}/',[SiswaController::class,'destroy']);
+
 
        Route::get('/ekskul',[EkskulController::class,'index']);
        Route::get('/ekskul/create',[EkskulController::class,'create']);
@@ -37,7 +52,7 @@ Route::middleware(['auth'])->group(function(){
        Route::put('/ekskul/{id}/',[EkskulController::class,'update']);
        Route::delete('/ekskul/{id}/',[EkskulController::class,'destroy']);
 });
-Auth::routes();
+
 Route::get('/beranda',[BerandaController::class,'index']);
 Route::get('/beranda/pramuka',[BerandaController::class,'index_pramuka']);
 Route::get('/beranda/paskibra',[BerandaController::class,'index_paskibra']);
@@ -57,4 +72,3 @@ Route::get('/beranda/englishclub',[BerandaController::class,'index_englishclub']
 
 
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
