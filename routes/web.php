@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\SiswaController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\EkskulController;
 use App\Http\Controllers\BerandaController;
 use App\Http\Controllers\DashboardController;
@@ -26,6 +26,7 @@ Route::middleware(['auth'])->group(function(){
    // Route::get('/dashboard',[DashboardController::class,'index']);
 
 
+   Route::get('/home', [DashboardController::class,'index']);
    Route::get('/dashboard', [DashboardController::class,'index']);
    Route::get('/pendaftaran',[PendaftaranController::class,'index']);
     Route::get('/pendaftaran/create',[PendaftaranController::class,'create']);
@@ -37,12 +38,12 @@ Route::middleware(['auth'])->group(function(){
 
 
    
-       Route::get('/siswa',[SiswaController::class,'index']);
-       Route::get('/siswa/create',[SiswaController::class,'create']);
-       Route::post('/siswa/store',[SiswaController::class,'store']);
-       Route::get('/siswa/{id}/edit',[SiswaController::class,'edit']);
-       Route::put('/siswa/{id}/',[SswaController::class,'update']);
-       Route::delete('/siswa/{id}/',[SiswaController::class,'destroy']);
+       Route::get('/siswa',[UserController::class,'index']);
+       Route::get('/siswa/create',[UserController::class,'create']);
+       Route::post('/siswa/store',[UserController::class,'store']);
+       Route::get('/siswa/{id}/edit',[UserController::class,'edit']);
+       Route::put('/siswa/{id}/',[UserController::class,'update']);
+       Route::delete('/siswa/{id}/',[UserController::class,'destroy']);
 
 
        Route::get('/ekskul',[EkskulController::class,'index']);

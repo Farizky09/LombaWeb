@@ -34,10 +34,16 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#history">History</a>
+                    </li>             
+                    @if (Auth::check())
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://127.0.0.1:8000/login"><i class='bx bx-user'></i> {{ Auth::user()->name }}</a>
                     </li>                    
+                    @else
                     <li class="nav-item">
                         <a class="nav-link" href="http://127.0.0.1:8000/login"><i class='bx bx-user'></i> Login</a>
                     </li>                    
+                    @endif       
                 </ul>                
             </div>
         </div>

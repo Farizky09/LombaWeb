@@ -7,22 +7,22 @@ use Illuminate\Http\Request;
 class UserController extends Controller
 {
     public function index(){
-        $user = User::all();
-        return view('siswa.index',compact(['user']));
+        $siswa = User::all();
+        return view('siswa.index',compact(['siswa']));
     }
     public function create(){
         return view('siswa.create');
     }
     public function store(Request $request){
         User::create($request->except(['_token','submit']));
-        return redirect('/siswa'siswa
+        return redirect('/siswa');}
     public function edit($id){
-        $user = User::find($id);
-        return view('siswa.edit',compact(['user']));
+        $siswa = User::find($id);
+        return view('siswa.edit',compact(['siswa']));
     }
     public function update($id, Request $request){
-        $user = User::find($id);
-        $user->update($request->except(['_token','submit']));
+        $siswa = User::find($id);
+        $siswa->update($request->except(['_token','submit']));
         return redirect('/siswa');
     }
     public function destroy($id){

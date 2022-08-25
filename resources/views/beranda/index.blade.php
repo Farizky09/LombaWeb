@@ -6,7 +6,11 @@
                 <div class="col-md-8">
                     <h1 class="display-2 fw-bold" data-aos="fade-up">Selamat Datang di <span class="text-brand">SMKN 6 JEMBER.</span></h1>
                     <h4 data-aos="fade-up" data-aos-delay="100" class="mt-3 mb-5">Salah satu pendidikan dengan jenjang SMK di Tanggul Kulon</h4>
+                    @if (Auth::check())
+                    <div data-aos="fade-up" data-aos-delay="200"><a href="/login" class="btn btn-brand">{{ Auth::user()->name }}</a></div>
+                    @else
                     <div data-aos="fade-up" data-aos-delay="200"><a href="/login" class="btn btn-brand">Login</a></div>
+                    @endif
                 </div>
             </div>
         </div>
