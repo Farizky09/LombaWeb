@@ -112,6 +112,7 @@
         @if(Auth::user()->role == "siswa")
         @foreach ($siswa as $s)
         <div class="container-fluid py-4">
+<<<<<<< HEAD
             <div class="row">
                 <div class="col-12">
                     <div class="card mb-4">
@@ -152,5 +153,55 @@
             </div>
         </div>
           @endforeach
+=======
+          <div class="row">
+              <div class="col-12">
+                  <div class="card mb-4">
+                      <div class="card-header pb-0">
+                          <h6>Menambahkan Data Siswa</h6>
+                      </div>
+                      <div class="card-body px-0 pt-0 pb-2">
+                          <div class="table-responsive p-0">
+                              <table class="table align-items-center mb-0">
+                                @foreach ($pendaftaran as $s)
+                                <tr>                    
+                                  <td>
+                                    <p class="text-xs font-weight-bold mb-0 ps-3">{{ $s->name }}</p>                    
+                                  </td>
+                                  <td class="align-middle text-center text-sm">
+                                    <span class="text-secondary text-xs font-weight-bold">{{ $s->nis }}</span>
+                                  </td>
+                                  <td class="align-middle text-center">
+                                    <span class="text-secondary text-xs font-weight-bold">{{ $s->kelas }}</span>
+                                  </td>
+                                  <td class="align-middle text-center">
+                                    <span class="text-secondary text-xs font-weight-bold">{{ $s->jenis_kelamin }}</span>
+                                  </td>
+                                  <td class="align-middle text-center">
+                                    <span class="text-secondary text-xs font-weight-bold">{{ $s->no_hp }}</span>
+                                  </td>
+                                  <td class="align-middle text-center">
+                                    <span class="text-secondary text-xs font-weight-bold">{{ $s->alamat }}</span>
+                                  </td>
+                               
+                                  <td class="align-middle text-center">
+                                      <form action="/siswa/{{ $s->id }}" method="POST">
+                                          @csrf
+                                         @method('delete')
+                                         <input class="btn btn-danger btn-sm mx-1 mt-3" type="submit" onclick="return confirm('apakah anda yakin ingin dihapus?')" value="Delete">
+                                          <a href="/siswa/{{ $s->id }}/edit" class="btn btn-warning btn-sm mx-1 mt-3" data-toggle="tooltip" data-original-title="Edit user">
+                                            Edit
+                                        </a>   
+                                     </form>
+                                  </td>
+                                </tr>
+                              </table>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+>>>>>>> 31d3f654cc52101b671412ee46681c40123e4587
         @endif
     @endsection
