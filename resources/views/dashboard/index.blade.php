@@ -110,6 +110,47 @@
         </div>
         @endif
         @if(Auth::user()->role == "siswa")
-
+        @foreach ($siswa as $s)
+        <div class="container-fluid py-4">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card mb-4">
+                        <div class="card-header pb-0">                            
+                            <a href="/dashboard/{{ $s->id }}/edit" class="btn btn-primary float-end" data-toggle="tooltip" data-original-title="Edit user">
+                                Lengkapi Data
+                            </a>   
+                            <h6>Profile</h6>
+                        </div>
+                        <div class="card-body px-0 pt-0 pb-2">
+                            <div class="table-responsive p-0">
+                                <table class="table align-items-center mb-0">
+                                    @foreach ($siswa as $s)
+                                        <tr>
+                                            <th class="p-4 text-uppercase" >Nis :</th><td>{{ $s->nis }}</td>
+                                        </tr>                                        
+                                        <tr>
+                                            <th class="p-4 text-uppercase" >nama :</th><td>{{ $s->name }}</td>
+                                        </tr>                                        
+                                        <tr>
+                                            <th class="p-4 text-uppercase" >kelas :</th><td>{{ $s->kelas }}</td>
+                                        </tr>                                        
+                                        <tr>
+                                            <th class="p-4 text-uppercase" >jenis kelamin :</th><td>{{ $s->jenis_kelamin }}</td>
+                                        </tr>                                        
+                                        <tr>
+                                            <th class="p-4 text-uppercase" >no hp :</th><td>{{ $s->no_hp }}</td>
+                                        </tr>                                        
+                                        <tr>
+                                            <th class="p-4 text-uppercase" >email :</th><td>{{ $s->email }}</td>
+                                        </tr>                                                                        
+                                    @endforeach
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+          @endforeach
         @endif
     @endsection
