@@ -31,4 +31,15 @@ class UserController extends Controller
         return redirect('/siswa');
 
     }
+    public function updateprofile()
+    {
+        $user = Auth::user();
+        return view ('siswa.updateprofile');
+    }
+
+
+    {
+        $user = Auth::user();
+        return view('siswa.profile');
+    }
 }
