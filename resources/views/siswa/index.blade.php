@@ -66,7 +66,7 @@
                   </tr>
                 </thead>
                 @foreach ($siswa as $s)
-                <tbody>
+              
                   <tr>
                     {{-- <td>
                       <div class="d-flex px-2 py-1">                      
@@ -105,7 +105,7 @@
                        </form>
                     </td>
                   </tr>
-                </tbody>
+                
                 @endforeach
               </table>
             </div>
