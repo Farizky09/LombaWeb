@@ -15,7 +15,7 @@
                                     @csrf
                                     <div class="m-3">
                                         <label for="exampleFormControlInput1" class="form-label">NIS</label>
-                                        <input type="text" class="form-control" name="nis"
+                                        <input type="number" class="form-control" name="nis"
                                             value="{{ $siswa->nis }}" id="exampleFormControlInput1"
                                             placeholder="Masukkan NIS">
                                     </div>
@@ -32,6 +32,7 @@
                                             placeholder="Masukkan Kelas">
                                     </div>
                                     <div class="m-3">
+                                        <label for="exampleFormControlInput1" class="form-label">Jenis Kelamin</label>
                                         <select name="jenis_kelamin" class="form-select"
                                             value="{{ $siswa->jenis_kelamin }}">
                                             <option value="">Pilih jenis Kelamin</option>
@@ -46,7 +47,13 @@
                                         <input type="number" class="form-control" name="no_hp"
                                             value="{{ $siswa->no_hp }}" id="exampleFormControlInput1"
                                             placeholder="Masukkan No HP">
-                                    </div>
+                                    </div>                                
+                                    <div class="m-3">
+                                        <label for="exampleFormControlInput1" class="form-label">Email</label>
+                                        <input type="email" class="form-control" name="email"
+                                            value="{{ $siswa->email }}" id="exampleFormControlInput1"
+                                            placeholder="Masukkan Email">
+                                    </div>                                
                                     <div class="m-3">
                                         <label for="exampleFormControlTextarea1" class="form-label">Alamat</label>
                                         <textarea class="form-control" name="alamat" id="exampleFormControlTextarea1" rows="3">{{ $siswa->alamat }}</textarea>

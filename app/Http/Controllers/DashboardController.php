@@ -3,19 +3,20 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Ekskul;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class DashboardController extends Controller
-{
-    public function index()
-    {
-        $siswa = User::where('id', '!=', '1')->get();
-        return view('dashboard.index', compact(['siswa']));
+{    
+    public function index(){
+        return redirect('dashboard');
     }
     public function edit($id)
     {
-        $siswa = User::find($id);
-        return view('dashboard.edit', compact(['siswa']));
+        $ekskul = Ekskul::all();        
+        $siswa = Auth::user();
+        return view('dashboard.edit', compact(['siswa','ekskul']));
     }
     public function update($id, Request $request)
     {
@@ -23,4 +24,11 @@ class DashboardController extends Controller
         $siswa->update($request->except(['_token', 'submit']));
         return redirect('/dashboard');
     }
+    public function getProfile()
+    {
+        $siswa = Auth::user();
+        // return $siswa;
+        return view('dashboard.index',['siswa' => $siswa]);
+    }
+    
 }

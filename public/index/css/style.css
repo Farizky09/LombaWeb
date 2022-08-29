@@ -92,6 +92,15 @@ img {
     transition: var(--transition);
 }
 
+@media (max-width: 992px){
+    .navbar {
+        padding-top: 7px;
+        padding-bottom: 7px;
+        background-color: white;
+        box-shadow: var(--shadow);
+    }    
+}
+
 .navbar.scrolled {
     padding-top: 7px;
     padding-bottom: 7px;

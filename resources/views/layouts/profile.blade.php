@@ -63,11 +63,18 @@
     @endif
     @if(Auth::user()->role == "siswa")
     <li class="nav-item">
-      <a class="nav-link " href="/profil">
+      <a class="nav-link " href="/dashboard">
+        <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+          <i class="ni ni-circle-08 text-success text-sm opacity-10"></i>
+        </div>
+        <span class="nav-link-text ms-1">Profile</span>
+      </a>
+    <li class="nav-item">
+      <a class="nav-link " href="/daftarEkskul">
         <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
           <i class="ni ni-credit-card text-success text-sm opacity-10"></i>
         </div>
-        <span class="nav-link-text ms-1">Profile</span>
+        <span class="nav-link-text ms-1">Daftar Ektrakurikuler</span>
       </a>
     </li>
     @endif
@@ -96,7 +103,7 @@
                   </a>
                 </li>
                 <li class="nav-item dropdown pe-2 d-flex align-items-center">
-                  <a href="javascript:;" class="nav-link text-white p-0" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                  <a href="/dasboard" class="nav-link text-white p-0" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="fa fa-user me-sm-1"><span class="d-sm-inline d-none"> {{ Auth::user()->name }}</span></i>
                   </a>
                   <ul class="dropdown-menu  dropdown-menu-end  px-2 py-3 me-sm-n4" aria-labelledby="dropdownMenuButton">

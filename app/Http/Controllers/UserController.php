@@ -37,9 +37,9 @@ class UserController extends Controller
         return view ('siswa.updateprofile');
     }
 
-
-    {
-        $user = Auth::user();
-        return view('siswa.profile');
-    }
+    
+    // {
+    //     $user = Auth::user();
+    //     return view('siswa.profile');
+    // }
 }

@@ -1,3 +1,4 @@
+@if(Auth::user()->role== 'admin')
 @extends('layouts.profile')
 @section('c-profile')
     {{-- <div class="container">
@@ -123,3 +124,4 @@
         </div>
     </div>
 @endsection
+@endif

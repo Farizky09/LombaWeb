@@ -23,6 +23,7 @@ return new class extends Migration
             $table->text('alamat')->nullable();
             $table->string('email')->unique();
             $table->string('role')->default('siswa');
+            $table->string('ekstrakurikuler')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
