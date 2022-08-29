@@ -17,24 +17,24 @@
                                         <label for="exampleFormControlInput1" class="form-label">NIS</label>
                                         <input type="number" class="form-control" name="nis"
                                             value="{{ $siswa->nis }}" id="exampleFormControlInput1"
-                                            placeholder="Masukkan NIS">
+                                            placeholder="Masukkan NIS" required>
                                     </div>
                                     <div class="m-3">
                                         <label for="exampleFormControlInput1" class="form-label">Nama</label>
                                         <input type="text" class="form-control" name="nama"
                                             value="{{ $siswa->name }}" id="exampleFormControlInput1"
-                                            placeholder="Masukkan NAMA">
+                                            placeholder="Masukkan NAMA" required>
                                     </div>
                                     <div class="m-3">
                                         <label for="exampleFormControlInput1" class="form-label">Kelas</label>
                                         <input type="text" class="form-control" name="kelas"
                                             value="{{ $siswa->kelas }}" id="exampleFormControlInput1"
-                                            placeholder="Masukkan Kelas">
+                                            placeholder="Masukkan Kelas" required>
                                     </div>
                                     <div class="m-3">
                                         <label for="exampleFormControlInput1" class="form-label">Jenis Kelamin</label>
                                         <select name="jenis_kelamin" class="form-select"
-                                            value="{{ $siswa->jenis_kelamin }}">
+                                            value="{{ $siswa->jenis_kelamin }}" required>
                                             <option value="">Pilih jenis Kelamin</option>
                                             <option value="L" @if ($siswa->jenis_kelamin == 'L') selected @endif>
                                                 Laki-laki</option>
@@ -46,7 +46,7 @@
                                         <label for="exampleFormControlInput1" class="form-label">No HP</label>
                                         <input type="number" class="form-control" name="no_hp"
                                             value="{{ $siswa->no_hp }}" id="exampleFormControlInput1"
-                                            placeholder="Masukkan No HP">
+                                            placeholder="Masukkan No HP" required>
                                     </div>                                
                                     <div class="m-3">
                                         <label for="exampleFormControlInput1" class="form-label">Email</label>
@@ -56,7 +56,7 @@
                                     </div>                                
                                     <div class="m-3">
                                         <label for="exampleFormControlTextarea1" class="form-label">Alamat</label>
-                                        <textarea class="form-control" name="alamat" id="exampleFormControlTextarea1" rows="3">{{ $siswa->alamat }}</textarea>
+                                        <textarea class="form-control" name="alamat" id="exampleFormControlTextarea1" rows="3" required>{{ $siswa->alamat }}</textarea>
                                     </div>
                                     <input type="submit" class="btn btn-primary m-3" name="submit" value="Simpan">
                                 </form>

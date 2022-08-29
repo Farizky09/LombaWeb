@@ -17,20 +17,20 @@
                                         <label for="exampleFormControlInput1" class="form-label">Kode</label>
                                         <input type="text" class="form-control" name="kode"
                                             value="{{ $ekskul->kode }}" id="exampleFormControlInput1"
-                                            placeholder="Masukkan NIS">
+                                            placeholder="Masukkan NIS" required>
                                     </div>
                                     <div class="m-3">
                                         <label for="exampleFormControlInput1" class="form-label">Nama
                                             Ekstrakurikuler</label>
                                         <input type="text" class="form-control" name="nama_ekskul"
                                             value="{{ $ekskul->nama_ekskul }}" id="exampleFormControlInput1"
-                                            placeholder="Masukkan NAMA">
+                                            placeholder="Masukkan NAMA" required>
                                     </div>
                                     <div class="m-3">
                                         <label for="exampleFormControlInput1" class="form-label">Pembina</label>
                                         <input type="text" class="form-control" name="pembina"
                                             value="{{ $ekskul->pembina }}" id="exampleFormControlInput1"
-                                            placeholder="Masukkan Kelas">
+                                            placeholder="Masukkan Kelas" required>
                                     </div>
                                     <input type="submit" class="btn btn-primary m-3" name="submit" value="simpan">
                                 </form>

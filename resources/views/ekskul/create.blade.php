@@ -15,18 +15,18 @@
                                     <div class="m-3">
                                         <label for="exampleFormControlInput1" class="form-label">Kode</label>
                                         <input type="text" class="form-control" name="kode"
-                                            id="exampleFormControlInput1" placeholder="Masukkan KODE">
+                                            id="exampleFormControlInput1" placeholder="Masukkan KODE" required>
                                     </div>
                                     <div class="m-3">
                                         <label for="exampleFormControlInput1" class="form-label">Nama
                                             Ekstrakurikuler</label>
                                         <input type="text" class="form-control" name="nama_ekskul"
-                                            id="exampleFormControlInput1" placeholder="Masukkan Nama">
+                                            id="exampleFormControlInput1" placeholder="Masukkan Nama" required>
                                     </div>
                                     <div class="m-3">
                                         <label for="exampleFormControlInput1" class="form-label">Pembina</label>
                                         <input type="text" class="form-control" name="pembina"
-                                            id="exampleFormControlInput1" placeholder="Masukkan Pembina">
+                                            id="exampleFormControlInput1" placeholder="Masukkan Pembina" required>
                                     </div>
 
                                     <input type="submit" class="btn btn-primary m-3" name="submit" value="Simpan">

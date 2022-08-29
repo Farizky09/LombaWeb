@@ -69,14 +69,18 @@
         </div>
         <span class="nav-link-text ms-1">Profile</span>
       </a>
-    <li class="nav-item">
-      <a class="nav-link " href="/daftarEkskul">
-        <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-          <i class="ni ni-credit-card text-success text-sm opacity-10"></i>
-        </div>
-        <span class="nav-link-text ms-1">Daftar Ektrakurikuler</span>
-      </a>
-    </li>
+      @if (Auth::user()->nis == '')
+      
+      @else
+      <li class="nav-item">
+        <a class="nav-link " href="/daftarEkskul">
+          <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+            <i class="ni ni-credit-card text-success text-sm opacity-10"></i>
+          </div>
+          <span class="nav-link-text ms-1">Daftar Ektrakurikuler</span>
+        </a>
+      </li>          
+      @endif
     @endif
   </aside>
 
