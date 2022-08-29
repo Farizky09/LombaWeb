@@ -52,7 +52,7 @@
                                         <label for="exampleFormControlInput1" class="form-label">Email</label>
                                         <input type="email" class="form-control" name="email"
                                             value="{{ $siswa->email }}" id="exampleFormControlInput1"
-                                            placeholder="Masukkan Email">
+                                            placeholder="Masukkan Email" disabled>
                                     </div>                                
                                     <div class="m-3">
                                         <label for="exampleFormControlTextarea1" class="form-label">Alamat</label>

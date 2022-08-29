@@ -13,9 +13,9 @@
                                 @csrf
                                 <div class="m-3">
                                     <label for="exampleInputEmail1" class="form-label">Nama Ektrakurikuler</label>
-                                    <select class="form-select" name="ekstrakurikuler" aria-label="Default select example">
+                                    <select class="form-select" name="kode_ekstrakurikuler" aria-label="Default select example">
                                         @foreach ($ekskul as $s)
-                                            <option value="{{ $s->nama_ekskul }}">{{ $s->nama_ekskul }}</option>
+                                            <option value="{{ $s->kode }}">{{ $s->nama_ekskul }}</option>
                                         @endforeach
                                     </select>
                                     <div id="emailHelp" name="nama_ekskul" value="" class="form-text">Cuma bisa memilih satu ektrakurikuler.</div>

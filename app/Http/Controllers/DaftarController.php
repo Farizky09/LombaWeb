@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Ekskul;
+use App\Models\Pendaftaran;
 // use App\Http\Controllers\Auth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -31,8 +32,13 @@ return redirect ('dashboard');
           // return $request->all();
           // Ekskul::create($request->except(['_token','submit']));
           $user = Auth::user();
-          $user->ekstrakurikuler = $request->ekstrakurikuler;
-          $user->save();
+          Pendaftaran::create([
+               'nis' => $user->nis,
+               'kode' => $request->kode_ekstrakurikuler
+          ]);
+          // $user->ekstrakurikuler = $request->ekstrakurikuler;
+          // $user->save();
+          
           return redirect('/dashboard');
 }
 }

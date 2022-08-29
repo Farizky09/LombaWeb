@@ -16,9 +16,9 @@ return new class extends Migration
         Schema::create('pendaftaran', function (Blueprint $table) {
             $table->id();
             $table->string('nis');
-            $table->string('nama');
+            // $table->string('nama');
             $table->string('kode');
-            $table->string('ekskul');
+            // $table->string('ekskul');
             $table->timestamps();
         });
     }

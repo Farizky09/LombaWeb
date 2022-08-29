@@ -6,10 +6,12 @@ use App\Models\User;
 use App\Models\Ekskul;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class DashboardController extends Controller
 {    
     public function index(){
+        
         return redirect('dashboard');
     }
     public function edit($id)
@@ -27,8 +29,28 @@ class DashboardController extends Controller
     public function getProfile()
     {
         $siswa = Auth::user();
-        // return $siswa;
-        return view('dashboard.index',['siswa' => $siswa]);
+        if($siswa->role == 'admin'){
+            $ekstra = DB::table('users')
+            ->join('pendaftaran', 'pendaftaran.nis','=','users.nis')
+            ->join('ekskul', 'ekskul.kode','=','pendaftaran.kode')
+            ->select('ekskul.nama_ekskul','users.*')
+            ->get()
+            ;
+            // return $ekstra[0]->nama_ekskul;
+            return view('dashboard.index',['ekstra'=>$ekstra]);
+
+        }else{
+            $ekstra = DB::table('users')
+            ->join('pendaftaran', 'pendaftaran.nis','=','users.nis')
+            ->join('ekskul', 'ekskul.kode','=','pendaftaran.kode')
+            ->select('ekskul.nama_ekskul','users.name')
+            ->where('users.nis','=',$siswa->nis)
+            ->get()
+            ;
+            // return $ekstra;
+            return view('dashboard.index',['siswa' => $siswa,'ekskul'=>$ekstra]);
+
+        }
     }
     
 }
