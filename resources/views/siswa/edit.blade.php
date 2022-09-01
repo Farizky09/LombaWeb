@@ -21,7 +21,7 @@
                                     </div>
                                     <div class="m-3">
                                         <label for="exampleFormControlInput1" class="form-label">Nama</label>
-                                        <input type="text" class="form-control" name="nama"
+                                        <input type="text" class="form-control" name="name"
                                             value="{{ $siswa->name }}" id="exampleFormControlInput1"
                                             placeholder="Masukkan NAMA" required>
                                     </div>

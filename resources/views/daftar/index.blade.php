@@ -17,8 +17,7 @@
                                         @foreach ($ekskul as $s)
                                             <option value="{{ $s->kode }}">{{ $s->nama_ekskul }}</option>
                                         @endforeach
-                                    </select>
-                                    <div id="emailHelp" name="nama_ekskul" value="" class="form-text">Cuma bisa memilih satu ektrakurikuler.</div>
+                                    </select>                                    
                                 </div>
                                 <button type="submit" class="btn btn-primary m-3">Submit</button>
                             </form>

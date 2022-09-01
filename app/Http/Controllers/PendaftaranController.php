@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+// use App\Models\Pendaftaran;
+
 use App\Models\Pendaftaran;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -16,7 +18,7 @@ class PendaftaranController extends Controller
         return view('pendaftaran.create');
     }
     public function store(Request $request){
-        Penpendaftaranan::create($request->except(['_token','submit']));
+        Pendaftaran::create($request->except(['_token','submit']));
         return redirect('/pendaftaran');
 
     }

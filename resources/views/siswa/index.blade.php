@@ -48,7 +48,7 @@
             <div class="col-12">
                 <div class="card mb-4">
                     <div class="card-header pb-0">
-                        <a href="/siswa/create"><button class="btn btn-primary float-end">Tambah data</button></a>
+                        {{-- <a href="/siswa/create"><button class="btn btn-primary float-end">Tambah data</button></a> --}}
                         <h6>Data Siswa</h6>
                     </div>
                     <div class="card-body px-0 pt-0 pb-2">

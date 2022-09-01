@@ -20,7 +20,7 @@
                                 </div>
                                 <div class="m-3">
                                     <label for="exampleFormControlInput1" class="form-label">Nama</label>
-                                    <input type="text" class="form-control" name="nama" id="exampleFormControlInput1"
+                                    <input type="text" class="form-control" name="name" id="exampleFormControlInput1"
                                         placeholder="Masukkan NAMA" required>
                                 </div>
                                 <div class="m-3">
@@ -36,15 +36,20 @@
                                     </select>
                                 </div>
                                 <div class="m-3">
+                                    <label for="exampleFormControlInput1" class="form-label">Email</label>
+                                    <input type="email" class="form-control" name="email" id="exampleFormControlInput1"
+                                        placeholder="Masukkan email" required>
+                                </div>
+                                <div class="m-3">
                                     <label for="exampleFormControlInput1" class="form-label">NO HP</label>
                                     <input type="number" class="form-control" name="no_hp" id="exampleFormControlInput1"
-                                        placeholder="Masukkan no" required>
+                                        placeholder="Masukkan no hp" required>
                                 </div>
                                 <div class="m-3">
                                     <label for="exampleFormControlTextarea1" class="form-label">Alamat</label>
                                     <textarea class="form-control" name="alamat" id="exampleFormControlTextarea1" rows="3" required></textarea>
                                 </div>
-                                <input type="submit" class="btn btn-primary m-3" name="submit" value="simpan">
+                                <input type="submit" class="btn btn-primary m-3" name="submit" value="Simpan">
                             </form>
                         </table>
                     </div>
