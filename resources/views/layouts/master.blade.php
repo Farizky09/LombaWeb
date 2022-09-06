@@ -6,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SMKN 6 JEMBER</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
-    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.css') }}">
+    <link href="{{ asset('assets/boxicons-2.1.2/css/boxicons.min.css') }}" rel='stylesheet'>
+    <link rel="stylesheet" href="{{ asset('assets/css/aos.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/fancybox.css') }}">
     <link rel="stylesheet" href="{{ asset('index/css/style.css') }}">
     <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('assets/img/favicon.jpg') }}">
     <link rel="icon" type="image/png" href="{{ asset('assets/img/favicon.jpg') }}">
@@ -51,9 +51,9 @@
 
     @yield('content')
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('assets/js/fancybox.umd.js') }}"></script>
+    <script src="{{ asset('assets/js/aos.js') }}"></script>
     <script src="{{ asset('index/js/app.js') }}"></script>
 </body>
 
