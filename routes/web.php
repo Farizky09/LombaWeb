@@ -69,15 +69,3 @@ Route::middleware(['auth'])->group(function () {
 });
 
 Route::get('/beranda', [BerandaController::class, 'index']);
-Route::get('/beranda/pramuka', [BerandaController::class, 'index_pramuka']);
-Route::get('/beranda/paskibra', [BerandaController::class, 'index_paskibra']);
-Route::get('/beranda/pmr', [BerandaController::class, 'index_pmr']);
-Route::get('/beranda/basket', [BerandaController::class, 'index_basket']);
-Route::get('/beranda/paduansuara', [BerandaController::class, 'index_paduansuara']);
-Route::get('/beranda/sepakbola', [BerandaController::class, 'index_sepakbola']);
-Route::get('/beranda/futsal', [BerandaController::class, 'index_futsal']);
-Route::get('/beranda/voli', [BerandaController::class, 'index_voli']);
-Route::get('/beranda/teaterkesenian', [BerandaController::class, 'index_teaterkesenian']);
-Route::get('/beranda/remajamasjid', [BerandaController::class, 'index_remajamasjid']);
-Route::get('/beranda/tataboga', [BerandaController::class, 'index_tataboga']);
-Route::get('/beranda/englishclub', [BerandaController::class, 'index_englishclub']);
